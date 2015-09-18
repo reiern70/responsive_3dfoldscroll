@@ -61,7 +61,8 @@
 			    $("#f-"+folds[j].i+" .bottomHalf").css("height",Math.floor((folds[j].hh/2))+"px");
 			    $("#page").height((folds.length+0.5)*(options.animationLength));
 				if(numtimes <= (options.animationLength * folds[j].i)){
-					$("#f-"+folds[j].i+" .topHalf").css("-webkit-transform","rotateX(0deg)");
+					console.log("here!");
+                    $("#f-"+folds[j].i+" .topHalf").css("-webkit-transform","rotateX(0deg)");
 					$("#f-"+folds[j].i+" .topHalf").css("-moz-transform","rotateX(0deg)");
 					$("#f-"+folds[j].i+" .topHalf").css("transform","rotateX(0deg)");
 					
@@ -71,8 +72,6 @@
 					$("#f-"+folds[j].i+" .bottomHalf").css("transform","rotateX(0deg)");
 					$("#f-"+folds[j].i+".foldWrapper").css("height",""+folds[j].hh+"px");
 				}else{
-					
-					
 					var percentage = (1-((numtimes-(options.animationLength*(folds[j].i)))/(options.animationLength)));
 				    if(percentage < 0){
 					    percentage = 0;
